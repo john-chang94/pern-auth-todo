@@ -26,7 +26,7 @@ function App() {
           token: localStorage.getItem('token')
         }
       }
-      const res = await axios.get('http://localhost:5000/auth/verify', config)
+      const res = await axios.get('/auth/verify', config)
       res.data ? toggleAuth(true) : toggleAuth(false);
     } catch (err) {
       console.error(err.message);

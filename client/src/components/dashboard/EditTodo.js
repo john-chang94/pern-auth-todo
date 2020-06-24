@@ -11,7 +11,7 @@ const EditTodo = ({ todo, setTodosChange }) => {
                     token: localStorage.getItem('token')
                 }
             }
-            await axios.put(`http://localhost:5000/dashboard/todos/${id}`, body, config)
+            await axios.put(`/dashboard/todos/${id}`, body, config)
             setTodosChange(true);
         } catch (err) {
             console.error(err.message)

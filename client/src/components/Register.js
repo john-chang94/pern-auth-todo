@@ -22,7 +22,7 @@ const Register = ({ toggleAuth }) => {
         e.preventDefault();
         try {
             const body = { name, email, password };
-            const res = await axios.post('http://localhost:5000/auth/register', body)
+            const res = await axios.post('/auth/register', body)
 
             if (res) {
                 localStorage.setItem('token', res.data.token);

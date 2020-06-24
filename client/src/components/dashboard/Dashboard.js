@@ -17,7 +17,7 @@ const Dashboard = ({ toggleAuth }) => {
                     token: localStorage.getItem('token')
                 }
             }
-            const res = await axios.get('http://localhost:5000/dashboard/', config)
+            const res = await axios.get('/dashboard/', config)
             // Even if there are no records of todos, we used a LEFT JOIN in the route to grab info
             setName(res.data[0].user_name)
             setTodoList(res.data);

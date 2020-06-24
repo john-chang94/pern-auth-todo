@@ -12,7 +12,7 @@ const InputTodo = ({ setTodosChange }) => {
                     token: localStorage.getItem('token')
                 }
             }
-            await axios.post('http://localhost:5000/dashboard/todos', body, config)
+            await axios.post('/dashboard/todos', body, config)
             // Trigger the state change to update
             setTodosChange(true);
             setDescription('');

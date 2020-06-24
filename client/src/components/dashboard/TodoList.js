@@ -11,7 +11,7 @@ const TodoList = ({ todoList, setTodosChange }) => {
                     token: localStorage.getItem('token')
                 }
             }
-            await axios.delete(`http://localhost:5000/dashboard/todos/${id}`, config)
+            await axios.delete(`/dashboard/todos/${id}`, config)
             setTodosChange(true);
         } catch (err) {
             console.error(err.message);

@@ -18,7 +18,7 @@ const Login = ({ toggleAuth }) => {
         e.preventDefault();
         try {
             const body = { email, password };
-            const res = await axios.post('http://localhost:5000/auth/login', body)
+            const res = await axios.post('/auth/login', body)
 
             if (res) {
                 localStorage.setItem('token', res.data.token);
