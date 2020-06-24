@@ -6,7 +6,7 @@ function jwtGenerator(user_id) {
     const payload = {
         id: user_id
     }
-    return jwt.sign(payload, process.env.jwtSecret, { expiresIn: 60 * 60 }) // 1 hour
+    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 60 * 60 }) // 1 hour
 }
 
 module.exports = jwtGenerator;
